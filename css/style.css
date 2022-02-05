@@ -58,6 +58,8 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    transition-property: opacity;
+    transition: var(--animation-options);
 }
 
 .modal{
@@ -71,21 +73,27 @@ body{
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    border-radius: 4px;  
 }
 
 .close-button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
     width: 30px;
     height: 30px;
+    padding: 0;
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
 }
-.close-button{
-    position: absolute;
-    top: 8px;
-    right: 8px;
-
+.close-button svg{
+    width: 11px;
+    height: 11px;
 }
 
 .container{
@@ -139,6 +147,7 @@ body{
  }
 
  .nav a{
+    transition-property: color;
     transition: var(--animation-options);
 }
 
@@ -150,21 +159,22 @@ body{
  }
 
 .hover-line::after{
+    content: "";
+    display: block;
+    background-color: rgb(33, 150, 243);
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition-property: opacity;
     transition: var(--animation-options);
-    background-color: rgba(33, 150, 243, 0);
+    
 }
 
  .hover-line:hover::after{
-     content: "";
-     display: block;
-     background-color: rgba(33, 150, 243, 1);
-     height: 4px;
-     width: 100%;
-     border-radius: 2px;
-     position: absolute;
-     bottom: 0;
-    
-
+      opacity: 1;
  }
 
  .email-icon{
@@ -230,6 +240,8 @@ h1{
     display: block;
     margin: 0 auto;
     border: 1px solid transparent;
+    cursor: pointer;
+    transition-property: background-color;
     transition: var(--animation-options);
 }
 
@@ -248,6 +260,8 @@ h1{
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 6px 22px;
+    transition-property: color, background-color, box-shadow;
+    transition: var(--animation-options);
 }
 
 .our-projects-buttons:hover, 
@@ -420,6 +434,9 @@ margin-right: 30px;
     background: transparent;
     border-radius: 50%;
     color: #AFB1B8;
+    transition-property: background-color, color;
+    transition: var(--animation-options);
+    
 }
 
 .staff-social-link a{
@@ -432,7 +449,7 @@ margin-right: 30px;
 }
 
 
-.staff-social-link:hover, .social-link:focus{
+.staff-social-link:hover, .staff-social-link:focus{
     background-color: var(--button-hover-color);
     color: var(--white);
 }
@@ -464,6 +481,8 @@ margin-right: 30px;
     color: #AFB1B8;
     align-items: center;
     justify-content: center;
+    transition-property: border-color, color;
+    transition: var(--animation-options);
 }
 
 .partners-icon{
@@ -499,6 +518,8 @@ margin-right: 30px;
 .project-examples-items a{
     display: block;
     color: var(--main-text-color);
+    transition-property: box-shadow, transform;
+    transition: var(--animation-options);
 }
 .project-examples-items{
     margin-right: 30px;
@@ -625,6 +646,8 @@ margin-right: 30px;
 .social-link{
     background:#44454e;
     border-radius: 50%;
+    transition-property: background-color;
+    transition: var(--animation-options);
 }
 
 .social-link a{
