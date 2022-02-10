@@ -142,16 +142,14 @@ body{
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-    fill: var(--p-color); 
+    fill: var(--p-color);
+    transition: color var(--animation-options), fill var(--animation-options); 
  }
 
- .nav a{
-    transition: color var(--animation-options);
-}
 
-.nav a:hover, 
-.nav a:focus,
-.nav a:active{
+.nav-link:hover, 
+.nav-link:focus,
+.nav-link:active{
     color: var(--main-link-color-active);
     fill: var(--main-link-color-active); 
  }
@@ -250,7 +248,9 @@ h1{
     border-radius: 4px;
     border: 1px solid transparent;
     padding: 6px 22px;
-    transition: color background-color box-shadow var(--animation-options);
+    transition: color var(--animation-options), 
+                background-color var(--animation-options), 
+                box-shadow var(--animation-options);
 }
 
 .our-projects-buttons:hover, 
@@ -423,7 +423,8 @@ margin-right: 30px;
     background: transparent;
     border-radius: 50%;
     color: #AFB1B8;
-    transition: background-color color var(--animation-options);
+    transition: background-color var(--animation-options),
+                color var(--animation-options);
     
 }
 
@@ -469,7 +470,8 @@ margin-right: 30px;
     color: #AFB1B8;
     align-items: center;
     justify-content: center;
-    transition: border-color color var(--animation-options);
+    transition: border-color var(--animation-options),
+                color var(--animation-options);
 }
 
 .partners-icon{
@@ -505,7 +507,8 @@ margin-right: 30px;
 .project-examples-items a{
     display: block;
     color: var(--main-text-color);
-    transition: box-shadow transform var(--animation-options);
+    transition: box-shadow var(--animation-options),
+                transform var(--animation-options);
 }
 .project-examples-items{
     margin-right: 30px;
@@ -591,7 +594,7 @@ margin-right: 30px;
     bottom: 0;
     background: rgba(33, 150, 243, 0.9);
     transform: translateY(101%);
-    transition: var(--animation-options);
+    transition: transform var(--animation-options);
 }
 
 .project-examples-img-overlay p{
